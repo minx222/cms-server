@@ -8,7 +8,6 @@ export class SysRoleService {
 	constructor(private readonly prisma: PrismaService) {}
 
 	create(createSysRoleInput: CreateSysRoleInput) {
-		const v = createSysRoleInput.permission;
 		return this.prisma.sysRole.create({
 			data: {
 				...createSysRoleInput,

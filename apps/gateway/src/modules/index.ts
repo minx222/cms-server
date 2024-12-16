@@ -3,14 +3,16 @@ import { GraphQLModule } from '@nestjs/graphql';
 
 import { MercuriusDriver, MercuriusDriverConfig } from '@nestjs/mercurius';
 
+import { DateScalar } from '@/scalars';
+import { PrismaModule } from '@/components';
 import { RecipesModule } from './recipes/recipes.module';
 import { SysRoleModule } from './sys-role/sys-role.module';
-import { DateScalar } from '@/scalars';
 
 @Module({
 	imports: [
 		RecipesModule,
 		SysRoleModule,
+		PrismaModule,
 		GraphQLModule.forRoot<MercuriusDriverConfig>({
 			driver: MercuriusDriver,
 			autoSchemaFile: 'schema.gql',
