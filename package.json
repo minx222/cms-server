@@ -1,0 +1,42 @@
+{
+	"name": "low-code",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "turbo dev",
+		"lint": "turbo lint",
+		"lint:eslint": "eslint . --fix",
+		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+		"commit": "git status && git add -A && git-cz && git push"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"commitizen": "^4.3.0",
+		"cz-git": "^1.9.4",
+		"lefthook": "^1.7.11",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.0.0",
+		"eslint": "^8.0.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"prettier": "^2.3.2",
+		"turbo": "2.1.1"
+	},
+	"packageManager": "pnpm@9.11.0",
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-git"
+		}
+	},
+	"dependencies": {
+		"exlint": "^0.1.6",
+		"typescript-eslint": "^8.13.0"
+	}
+}

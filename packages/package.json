@@ -1,0 +1,24 @@
+{
+  "name": "packages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "catalog:nest10",
+    "@nestjs/core": "catalog:nest10",
+    "@nestjs/microservices": "catalog:nest10",
+    "class-transformer": "catalog:nest10",
+    "class-validator": "catalog:nest10",
+    "reflect-metadata": "catalog:nest10",
+    "rxjs": "catalog:nest10"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}

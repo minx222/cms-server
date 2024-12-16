@@ -1,0 +1,51 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""recipe """
+type Recipe {
+  id: ID!
+  title: String!
+  description: String
+  creationDate: Date!
+  ingredients: [String!]!
+}
+
+type SysRole {
+  id: String!
+  name: String!
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+"""Date custom scalar type"""
+scalar Date
+
+type Query {
+  recipe(id: String!): Recipe!
+  recipes: [Recipe!]!
+  sysRole(id: String!): SysRole!
+}
+
+type Mutation {
+  addRecipe(newRecipeData: NewRecipeInput!): Recipe!
+  removeRecipe(id: String!): Boolean!
+  createSysRole(createSysRoleInput: CreateSysRoleInput!): SysRole!
+  updateSysRole(updateSysRoleInput: UpdateSysRoleInput!): SysRole!
+  removeSysRole(id: String!): SysRole!
+}
+
+input NewRecipeInput {
+  title: String!
+  description: String
+  ingredients: [String!]!
+}
+
+input CreateSysRoleInput {
+  name: String!
+}
+
+input UpdateSysRoleInput {
+  id: String!
+  name: String!
+}

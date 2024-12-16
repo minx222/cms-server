@@ -1,0 +1,44 @@
+{
+	"name": "apps",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@nestjs/common": "catalog:nest10",
+    "@nestjs/microservices": "catalog:nest10",
+		"@nestjs/core": "catalog:nest10",
+		"class-validator": "catalog:nest10",
+    "class-transformer": "catalog:nest10",
+		"rxjs": "catalog:nest10",
+		"reflect-metadata": "catalog:nest10",
+		"lodash": "^4.17.21",
+		"rimraf": "5.0.10"
+	},
+	"devDependencies": {
+		"@packages/decorators": "workspace:*",
+		"@packages/exceptions": "workspace:*",
+		"@packages/filters": "workspace:*",
+		"@packages/guards": "workspace:*",
+		"@packages/interceptors": "workspace:*",
+		"@packages/share": "workspace:*",
+    "@nestjs/cli": "catalog:nest10",
+		"@types/node": "^18.19.55",
+		"@nestjs/schematics": "catalog:nest10",
+		"@nestjs/testing": "catalog:nest10",
+		"@types/jest": "^26.0.24",
+		"@types/lodash": "^4.17.10",
+		"@swc/core": "^1.7.26",
+		"tsconfig-paths": "^3.10.1",
+		"typescript": "^4.3.5",
+		"jest": "27.0.6",
+		"vite-plugin-node": "^4.0.0",
+		"@types/supertest": "^2.0.11",
+		"supertest": "^6.1.3"
+	}
+}

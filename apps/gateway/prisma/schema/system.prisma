@@ -1,0 +1,42 @@
+model SysPermission {
+	id        	String   @id @default(uuid())
+  name      	String
+	code      	String
+	description String?
+  createdAt 	DateTime @default(now())
+	createdBy 	String
+  updatedAt 	DateTime @updatedAt
+	updatedBy 	String
+	deleted  		Boolean
+	deletedAt 	DateTime?
+	deletedBy 	String?
+}
+
+model SysRole{
+  id        	String   @id @default(uuid())
+  name      	String   @unique
+	description String?
+	code      	String
+	permission	String[]
+  createdAt 	DateTime @default(now())
+	createdBy 	String
+  updatedAt 	DateTime
+	updatedBy 	String
+	deleted  		Boolean
+	deletedAt 	DateTime?
+	deletedBy 	String?
+}
+
+model SysUser {
+  id        	String   @id @default(uuid())
+  name      	String
+  email     	String   @unique
+  roles     	String[]
+  createdAt 	DateTime @default(now())
+	createdBy 	String
+  updatedAt 	DateTime
+	updatedBy 	String
+	deleted  		Boolean
+	deletedAt 	DateTime?
+	deletedBy 	String?
+}
