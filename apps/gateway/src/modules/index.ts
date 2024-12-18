@@ -6,6 +6,7 @@ import { MercuriusDriver, MercuriusDriverConfig } from '@nestjs/mercurius';
 import { RecipesModule } from './recipes/recipes.module';
 import { SysRoleModule } from './sys-role/sys-role.module';
 import { DateScalar } from '@/scalars';
+import { env } from '@/config';
 
 @Module({
 	imports: [

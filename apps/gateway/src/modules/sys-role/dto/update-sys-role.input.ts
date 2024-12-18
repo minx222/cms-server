@@ -1,14 +1,8 @@
-import { SysRole } from '../entities/sys-role.entity';
-import { Field, InputType, OmitType } from '@nestjs/graphql';
+import { Field, InputType, PartialType } from '@nestjs/graphql';
+import { CreateSysRoleInput } from './create-sys-role.input';
 
 @InputType()
-export class UpdateSysRoleInput extends OmitType(SysRole, [
-	'createdAt',
-	'updatedAt',
-]) {
+export class UpdateSysRoleInput extends PartialType(CreateSysRoleInput) {
 	@Field(() => String)
 	id: string;
-
-	@Field(() => String)
-	name: string;
 }

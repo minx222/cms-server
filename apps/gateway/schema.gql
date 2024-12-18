@@ -14,8 +14,16 @@ type Recipe {
 type SysRole {
   id: String!
   name: String!
+  code: String!
+  description: String
+  permission: [String!]!
   createdAt: Date!
+  createdBy: String!
   updatedAt: Date!
+  updatedBy: String!
+  deleted: Boolean!
+  deletedAt: Date
+  deletedBy: String
 }
 
 """Date custom scalar type"""
@@ -24,7 +32,8 @@ scalar Date
 type Query {
   recipe(id: String!): Recipe!
   recipes: [Recipe!]!
-  sysRole(id: String!): SysRole!
+  findRoles: [SysRole!]!
+  findRoleById(id: String!): SysRole!
 }
 
 type Mutation {
@@ -43,9 +52,15 @@ input NewRecipeInput {
 
 input CreateSysRoleInput {
   name: String!
+  code: String!
+  description: String
+  permission: [String!]!
 }
 
 input UpdateSysRoleInput {
+  name: String
+  code: String
+  description: String
+  permission: [String!]
   id: String!
-  name: String!
 }

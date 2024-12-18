@@ -9,6 +9,7 @@
 		"prebuild": "rimraf dist",
 		"dev": "vite dev",
 		"build": "vite build",
+		"generate:db": "prisma generate",
 		"generate:typings": "bun generate-typings.ts",
 		"format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
 		"start": "nest start",

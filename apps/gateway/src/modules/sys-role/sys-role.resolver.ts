@@ -15,13 +15,13 @@ export class SysRoleResolver {
 		return this.sysRoleService.create(createSysRoleInput);
 	}
 
-	@Query(() => [SysRole], { name: 'sysRole' })
-	findAll() {
+	@Query(() => [SysRole], { name: 'findRoles' })
+	findRoles() {
 		return this.sysRoleService.findAll();
 	}
 
-	@Query(() => SysRole, { name: 'sysRole' })
-	findOne(@Args('id', { type: () => String }) id: string) {
+	@Query(() => SysRole, { name: 'findRoleById' })
+	findRole(@Args('id', { type: () => String }) id: string) {
 		return this.sysRoleService.findOne(id);
 	}
 

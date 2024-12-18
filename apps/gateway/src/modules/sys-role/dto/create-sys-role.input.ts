@@ -1,12 +1,16 @@
-import { Field, InputType, OmitType } from '@nestjs/graphql';
-import { SysRole } from '../entities/sys-role.entity';
+import { Field, InputType } from '@nestjs/graphql';
 
 @InputType()
-export class CreateSysRoleInput extends OmitType(SysRole, [
-	'id',
-	'createdAt',
-	'updatedAt',
-]) {
+export class CreateSysRoleInput {
 	@Field(() => String)
 	name: string;
+
+	@Field(() => String)
+	code: string;
+
+	@Field(() => String, { nullable: true })
+	description?: string;
+
+	@Field(() => [String])
+	permission?: string[];
 }
